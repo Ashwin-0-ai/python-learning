@@ -1,0 +1,5 @@
+budget = float(input("Enter your campaign budget in euros:"))
+print (f" 10% goes to testing :{budget *0.1:.2f} euros")
+print (f" 20% goes to social :{budget *0.2:.2f} euros")
+print (f" 30% goes to OOH :{budget *0.3:.2f} euros")
+print (f" 40% goes to digital :{budget *0.4:.2f} euros")
