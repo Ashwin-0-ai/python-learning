@@ -1,0 +1,14 @@
+campaigns ={ 
+    "OOH":5000 , 
+         "Digital" : 3200,
+             "Social" : 1500,
+                 "Email" : 800  
+                 }
+highest_channel = ""
+highest_spend = 0
+
+for channel, spend in campaigns.items():
+    if spend > highest_spend:
+        highest_channel = channel
+        highest_spend = spend
+print(f"Highest spend channel:{highest_channel} at Euro{highest_spend:,}")

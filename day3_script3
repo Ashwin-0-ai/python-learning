@@ -1,0 +1,6 @@
+spends = [ 5000, 3200 , 1500, 800, 2100 ] 
+total = 0
+for spends in spends:
+    total = total + spends
+
+print(f"Total campaign spend: Euro {total:,}")

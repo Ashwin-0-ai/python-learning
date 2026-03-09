@@ -1,0 +1,3 @@
+channels = ["OOH" , "Digital" , "Social" , "Email" , "Radio"]
+for channel in channels:
+    print(f"processing channel: {channel}")
