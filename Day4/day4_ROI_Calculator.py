@@ -3,5 +3,6 @@ def calculate_roi(spend, revenue):
     return roi
 
 # Testing the function
-result = calculate_roi(200, 40)
-print(f"roi: {result:,.2f}%")
+if __name__ == "__main__":
+ result: float = calculate_roi(200, 40)
+ print(f"roi: {result:,.2f}%")

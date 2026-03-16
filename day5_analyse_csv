@@ -1,0 +1,31 @@
+import csv
+import sys
+
+#Tell Python to look inside the day 4 folder for imports 
+sys.path.insert(0,'Day4')
+
+from day4_ROI_Calculator import calculate_roi
+from day4_currency_formatter import format_currency
+from day4_performance_classifier import classify_performance
+
+#read and analyse the CSV
+
+with open ("campaigns.csv", "r", encoding='utf-8-sig') as file:
+    reader = csv.DictReader(file)
+
+    print ("\n -----Analayse Campaign report-----")
+    print (f"{'Channel' :<12} {'Spend':<12} {'Revenue':<12} {'ROI':<12} {'Performance' }")
+    print ("-" *58) 
+
+    for row in reader:
+        channel = row['channel']
+        spend =int(row['spend'])
+        revenue = int(row['revenue'])
+
+        roi =calculate_roi(spend, revenue )
+        performance = classify_performance(roi)
+        spend_fmt = format_currency(spend)
+
+        print(f"{channel:<12} {spend_fmt:<12} {format_currency(revenue):<12} {roi:<8.1f} {performance}")
+    
+    

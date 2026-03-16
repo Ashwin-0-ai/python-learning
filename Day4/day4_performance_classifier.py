@@ -9,8 +9,8 @@ def classify_performance(roi):
         return "Negative - Pause Campaign"
     
 #Testing the function
-
-print(classify_performance(75))
-print(classify_performance(35))
-print(classify_performance(10))
-print(classify_performance(-5))
+if __name__ == "__main__":
+  print(classify_performance(75))
+  print(classify_performance(35))
+  print(classify_performance(10))
+  print(classify_performance(-5))
