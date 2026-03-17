@@ -1,0 +1,13 @@
+# Create messy campaigns
+
+campaigns = ["OOH Delhi", "DIGITAL_MUMBAI", "radio chennai","Social   ", "Print / Pondy"]
+
+print ("-----Before Cleaning ----")
+for c in campaigns:
+    print (f" '{c}'" )
+
+print ("\n----Ater Cleaning ----")
+for c in campaigns:
+
+    cleaned = c.strip().title().replace("_"," ")
+    print (f" '{cleaned}'")
