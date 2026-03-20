@@ -1,0 +1,9 @@
+#budget validator with a while loop
+while True:
+    budget =float(input("Enter a campign budget (must be over Euro 1000): "))
+    if budget > 1000:
+        print (f"Budget of Euro{budget:,} accepted")    
+        break
+    else:
+        print ("Budget is too low. Try Again.")
+        

@@ -1,0 +1,11 @@
+roi = float(input("Enter campaign ROI %: "))
+
+if roi >= 50:
+    print("Excellent performance — scale this campaign")
+elif roi >= 20:
+    print("Good performance — maintain current spend")
+elif roi >= 0:
+    print("Weak performance — review targeting")
+else:
+    print("Negative ROI — pause this campaign immediately")34
+    

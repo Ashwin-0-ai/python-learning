@@ -1,0 +1,12 @@
+import csv
+
+with open("campaigns.csv", "r", encoding='utf-8-sig') as file:
+    reader = csv.DictReader(file)
+    
+    print ("\n-----Raw campaigns data-----")
+    print (f"{'Channel' :<12} {'Spend':<12} {'Revenue'}")
+    print ("-" *35 )
+
+    for row in reader :
+         print (f"{row['channel'] :<12} {row['spend']:<12} {row['revenue']}")
+

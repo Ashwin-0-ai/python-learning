@@ -1,0 +1,31 @@
+import csv
+import sys
+sys.path.insert(0, 'Day4')
+
+from day4_ROI_Calculator import calculate_roi
+from day4_performance_classifier import classify_performance
+
+results = []
+
+with open("campaigns.csv", "r", encoding='utf-8') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        spend       = int(row['spend'])
+        revenue     = int(row['revenue'])
+        roi         = calculate_roi(spend, revenue)
+        performance = classify_performance(roi)
+        results.append({
+            "channel":     row['channel'],
+            "spend":       spend,
+            "revenue":     revenue,
+            "roi":         round(roi, 1),
+            "performance": performance
+        })
+
+with open("campaign_results.csv", "w", newline='', encoding='utf-8') as file:
+    writer = csv.DictWriter(file, fieldnames=["channel","spend","revenue","roi","performance"])
+    writer.writeheader()
+    writer.writerows(results)
+
+print("campaign_results.csv created!")
+print(f"{len(results)} campaigns analysed and saved.")
