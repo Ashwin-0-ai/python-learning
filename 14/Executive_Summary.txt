@@ -1,0 +1,44 @@
+
+================================================================================
+OOH CAMPAIGN PERFORMANCE REPORT
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+Total Campaigns Analyzed: 10
+Campaign Period: Dublin City Centre - 48 Sheet to Waterford Retail Park - 6 Sheet
+
+FINANCIAL PERFORMANCE
+---------------------
+Total Investment: €33,195.00
+Total Revenue Generated: €199,700.00
+Total Profit: €166,505.00
+Overall ROI: 501.6%
+
+ENGAGEMENT METRICS
+------------------
+Total Impressions: 5,113,456
+Total Clicks: 11,150
+Total Conversions: 747
+Average CTR: 3.12%
+Average CPM: €97.99
+Conversion Rate: 6.70%
+
+TOP PERFORMERS
+--------------
+Best City (by ROI): Belfast (1666.1% ROI)
+Best Format (by ROI): 6 Sheet (1570.8% ROI)
+
+Top 3 Campaigns:
+  3. Belfast Roadside - 6 Sheet - ROI: 2900.0%, Revenue: €45,000.00
+  4. Dublin Airport - Supersite - ROI: 464.7%, Revenue: €48,000.00
+  9. Belfast City Hall - Supersite - ROI: 432.3%, Revenue: €33,000.00
+
+
+RECOMMENDATIONS
+---------------
+1. Focus on 6 Sheet format - highest ROI
+2. Expand campaigns in Belfast - best performing city
+3. Review underperforming campaigns (ROI < 50%) for optimization
+
+================================================================================
