@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_355f00f73c327f7188377e80f4efe7f6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_355f00f73c327f7188377e80f4efe7f6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_355f00f73c327f7188377e80f4efe7f6 = L.map(
+                "map_355f00f73c327f7188377e80f4efe7f6",
+                {
+                    center: [53.4, -7.9],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+  "titles": "OpenStreetMap",
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_11f448a4d3cf7e5ee68195d27afce99a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_11f448a4d3cf7e5ee68195d27afce99a.addTo(map_355f00f73c327f7188377e80f4efe7f6);
+        
+    
+            var marker_ba523430095c40db19bb6e26aa6e804c = L.marker(
+                [52.2593, -7.1101],
+                {
+}
+            ).addTo(map_355f00f73c327f7188377e80f4efe7f6);
+        
+    
+            var icon_0d720429ae1973226e78d11d7d659e7a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c7c6f4e2ff66e1beff6a11261f53110 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ee2e246f51c4e3a3e9c39ec460cb57a5 = $(`<div id="html_ee2e246f51c4e3a3e9c39ec460cb57a5" style="width: 100.0%; height: 100.0%;">  <b>Waterford Retail Park - 6 Sheet</b><br>  City: Waterford<br> Format:campaign_name    Waterford Retail Park - 6 Sheet city                                   Waterford format                                   6 Sheet revenue                                     4100 roi                                       241.67 latitude                                 52.2593 longitude                                -7.1101 Name: 9, dtype: object<br> Revenue:€4,100<br> ROI:241.7% </div>`)[0];
+                popup_7c7c6f4e2ff66e1beff6a11261f53110.setContent(html_ee2e246f51c4e3a3e9c39ec460cb57a5);
+            
+        
+
+        marker_ba523430095c40db19bb6e26aa6e804c.bindPopup(popup_7c7c6f4e2ff66e1beff6a11261f53110)
+        ;
+
+        
+    
+    
+                marker_ba523430095c40db19bb6e26aa6e804c.setIcon(icon_0d720429ae1973226e78d11d7d659e7a);
+            
+</script>
+</html>

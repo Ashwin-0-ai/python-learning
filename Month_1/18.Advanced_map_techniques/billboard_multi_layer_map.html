@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_90be8c6308e4631b9a1839a8140697b0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_90be8c6308e4631b9a1839a8140697b0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_90be8c6308e4631b9a1839a8140697b0 = L.map(
+                "map_90be8c6308e4631b9a1839a8140697b0",
+                {
+                    center: [53.4, -7.9],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_61e3a58ec436cc7df265fa36b2dee6ae = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_61e3a58ec436cc7df265fa36b2dee6ae.addTo(map_90be8c6308e4631b9a1839a8140697b0);
+        
+    
+            var feature_group_a1d44aee75336198ba2240b0bed71980 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_b29cd36666a0763d3579ed80dac8e6ee = L.marker(
+                [53.35721731308284, -6.264390081769537],
+                {
+}
+            ).addTo(feature_group_a1d44aee75336198ba2240b0bed71980);
+        
+    
+            var icon_dda6802c1ac8e7f7f4a83aec6d404fcc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ed9739a9a6f13baaea99f31100d7c6a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_59086da4402f356b58e809818a7d112a = $(`<div id="html_59086da4402f356b58e809818a7d112a" style="width: 100.0%; height: 100.0%;">     <b>Dublin City Centre - 48 Sheet</b><br>     City: Dublin<br>     Revenue: €18,900<br>     ROI: 350.0%     </div>`)[0];
+                popup_3ed9739a9a6f13baaea99f31100d7c6a.setContent(html_59086da4402f356b58e809818a7d112a);
+            
+        
+
+        marker_b29cd36666a0763d3579ed80dac8e6ee.bindPopup(popup_3ed9739a9a6f13baaea99f31100d7c6a)
+        ;
+
+        
+    
+    
+                marker_b29cd36666a0763d3579ed80dac8e6ee.setIcon(icon_dda6802c1ac8e7f7f4a83aec6d404fcc);
+            
+    
+            var marker_436016e2e394a81e3a73b74df28820d6 = L.marker(
+                [51.898631016968544, -8.478135516104985],
+                {
+}
+            ).addTo(feature_group_a1d44aee75336198ba2240b0bed71980);
+        
+    
+            var icon_294cc0e5499ab1c3390bfe65a35ed95b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36204bfed71cff7756d8360638c153c6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d9cd6a1b184c3bdaf568a919b35ad4b8 = $(`<div id="html_d9cd6a1b184c3bdaf568a919b35ad4b8" style="width: 100.0%; height: 100.0%;">     <b>Cork Motorway - Digital</b><br>     City: Cork<br>     Revenue: €11,200<br>     ROI: 300.0%     </div>`)[0];
+                popup_36204bfed71cff7756d8360638c153c6.setContent(html_d9cd6a1b184c3bdaf568a919b35ad4b8);
+            
+        
+
+        marker_436016e2e394a81e3a73b74df28820d6.bindPopup(popup_36204bfed71cff7756d8360638c153c6)
+        ;
+
+        
+    
+    
+                marker_436016e2e394a81e3a73b74df28820d6.setIcon(icon_294cc0e5499ab1c3390bfe65a35ed95b);
+            
+    
+            var marker_798c02aa39262dcf0a56db6cb4d54dcc = L.marker(
+                [54.589510059466505, -5.926556246237691],
+                {
+}
+            ).addTo(feature_group_a1d44aee75336198ba2240b0bed71980);
+        
+    
+            var icon_7fb2d5c95019c788347d17d61d061b70 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_688ebd76ed24a3c6fd6558af8f4ccd95 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_964fadc2548dd0fd6d7e932994eddefa = $(`<div id="html_964fadc2548dd0fd6d7e932994eddefa" style="width: 100.0%; height: 100.0%;">     <b>Belfast Roadside - 6 Sheet</b><br>     City: Belfast<br>     Revenue: €5,600<br>     ROI: 273.3%     </div>`)[0];
+                popup_688ebd76ed24a3c6fd6558af8f4ccd95.setContent(html_964fadc2548dd0fd6d7e932994eddefa);
+            
+        
+
+        marker_798c02aa39262dcf0a56db6cb4d54dcc.bindPopup(popup_688ebd76ed24a3c6fd6558af8f4ccd95)
+        ;
+
+        
+    
+    
+                marker_798c02aa39262dcf0a56db6cb4d54dcc.setIcon(icon_7fb2d5c95019c788347d17d61d061b70);
+            
+    
+            var marker_1938f5659ee5fd23389f369f2a5a6084 = L.marker(
+                [53.35499273384593, -6.265213777915718],
+                {
+}
+            ).addTo(feature_group_a1d44aee75336198ba2240b0bed71980);
+        
+    
+            var icon_a6f22a84e67789fb99299056df01be21 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_92afa72a66ebbd97a4888c563810a3b3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7bc00f98596a3798f2b52742e699f73e = $(`<div id="html_7bc00f98596a3798f2b52742e699f73e" style="width: 100.0%; height: 100.0%;">     <b>Dublin Airport - Supersite</b><br>     City: Dublin<br>     Revenue: €48,000<br>     ROI: 464.7%     </div>`)[0];
+                popup_92afa72a66ebbd97a4888c563810a3b3.setContent(html_7bc00f98596a3798f2b52742e699f73e);
+            
+        
+
+        marker_1938f5659ee5fd23389f369f2a5a6084.bindPopup(popup_92afa72a66ebbd97a4888c563810a3b3)
+        ;
+
+        
+    
+    
+                marker_1938f5659ee5fd23389f369f2a5a6084.setIcon(icon_a6f22a84e67789fb99299056df01be21);
+            
+    
+            var marker_e2decc6a9b9e9125022d41c7a913033c = L.marker(
+                [53.27880526420608, -9.056177029139521],
+                {
+}
+            ).addTo(feature_group_a1d44aee75336198ba2240b0bed71980);
+        
+    
+            var icon_901df615b8c9b9ad893db208f3026860 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c73a65af07f25d554d90315bfa5e7909 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2d58b954b28e00581458211899953677 = $(`<div id="html_2d58b954b28e00581458211899953677" style="width: 100.0%; height: 100.0%;">     <b>Galway City - Bus Shelter</b><br>     City: Galway<br>     Revenue: €2,800<br>     ROI: 194.7%     </div>`)[0];
+                popup_c73a65af07f25d554d90315bfa5e7909.setContent(html_2d58b954b28e00581458211899953677);
+            
+        
+
+        marker_e2decc6a9b9e9125022d41c7a913033c.bindPopup(popup_c73a65af07f25d554d90315bfa5e7909)
+        ;
+
+        
+    
+    
+                marker_e2decc6a9b9e9125022d41c7a913033c.setIcon(icon_901df615b8c9b9ad893db208f3026860);
+            
+    
+            var marker_f6d1af520e59e9e6427b009eba6830cf = L.marker(
+                [52.662976545741046, -8.619194444798065],
+                {
+}
+            ).addTo(feature_group_a1d44aee75336198ba2240b0bed71980);
+        
+    
+            var icon_1d500db7dee2a53ffa3c5675e7ff78a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c0ebd5806a93d81200f87a94ae6d32f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_889b15811837f0e2df17e96aa00c673c = $(`<div id="html_889b15811837f0e2df17e96aa00c673c" style="width: 100.0%; height: 100.0%;">     <b>Limerick Retail - 48 Sheet</b><br>     City: Limerick<br>     Revenue: €13,500<br>     ROI: 335.5%     </div>`)[0];
+                popup_1c0ebd5806a93d81200f87a94ae6d32f.setContent(html_889b15811837f0e2df17e96aa00c673c);
+            
+        
+
+        marker_f6d1af520e59e9e6427b009eba6830cf.bindPopup(popup_1c0ebd5806a93d81200f87a94ae6d32f)
+        ;
+
+        
+    
+    
+                marker_f6d1af520e59e9e6427b009eba6830cf.setIcon(icon_1d500db7dee2a53ffa3c5675e7ff78a1);
+            
+    
+            var marker_5ba12dd455c925fee0d8ddae35b36214 = L.marker(
+                [53.3565639617513, -6.256336698359493],
+                {
+}
+            ).addTo(feature_group_a1d44aee75336198ba2240b0bed71980);
+        
+    
+            var icon_22d0926a63556d54883f93eba1f1a9ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8cbf68e6ad4193eff54d6cf994578ce1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fe1d923140da7f6c68378274e00f6e2e = $(`<div id="html_fe1d923140da7f6c68378274e00f6e2e" style="width: 100.0%; height: 100.0%;">     <b>Dublin DART - 4 Sheet</b><br>     City: Dublin<br>     Revenue: €9,200<br>     ROI: 411.1%     </div>`)[0];
+                popup_8cbf68e6ad4193eff54d6cf994578ce1.setContent(html_fe1d923140da7f6c68378274e00f6e2e);
+            
+        
+
+        marker_5ba12dd455c925fee0d8ddae35b36214.bindPopup(popup_8cbf68e6ad4193eff54d6cf994578ce1)
+        ;
+
+        
+    
+    
+                marker_5ba12dd455c925fee0d8ddae35b36214.setIcon(icon_22d0926a63556d54883f93eba1f1a9ab);
+            
+    
+            var marker_0c9bf22fbf520756ee5533ba0e108cfe = L.marker(
+                [51.90499267686696, -8.465631484779212],
+                {
+}
+            ).addTo(feature_group_a1d44aee75336198ba2240b0bed71980);
+        
+    
+            var icon_2c6f52ec730c51b2e56dee126f0d5a80 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4af3f531f1099a05a37a35a485eb8d17 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8197349466db9d94b35de130ccc977d4 = $(`<div id="html_8197349466db9d94b35de130ccc977d4" style="width: 100.0%; height: 100.0%;">     <b>Cork City - Digital</b><br>     City: Cork<br>     Revenue: €17,600<br>     ROI: 417.6%     </div>`)[0];
+                popup_4af3f531f1099a05a37a35a485eb8d17.setContent(html_8197349466db9d94b35de130ccc977d4);
+            
+        
+
+        marker_0c9bf22fbf520756ee5533ba0e108cfe.bindPopup(popup_4af3f531f1099a05a37a35a485eb8d17)
+        ;
+
+        
+    
+    
+                marker_0c9bf22fbf520756ee5533ba0e108cfe.setIcon(icon_2c6f52ec730c51b2e56dee126f0d5a80);
+            
+    
+            var marker_c5c6024d2be44b3a5c5cde129298ffc2 = L.marker(
+                [54.60567428607492, -5.924838770162586],
+                {
+}
+            ).addTo(feature_group_a1d44aee75336198ba2240b0bed71980);
+        
+    
+            var icon_cee323f6d612bae56e6c3a56ef387f84 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d426d128c2034f2c8add38ca345c1f3c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_079885d2d4f7dd4faa229d0c1d1ff610 = $(`<div id="html_079885d2d4f7dd4faa229d0c1d1ff610" style="width: 100.0%; height: 100.0%;">     <b>Belfast City Hall - Supersite</b><br>     City: Belfast<br>     Revenue: €33,000<br>     ROI: 432.3%     </div>`)[0];
+                popup_d426d128c2034f2c8add38ca345c1f3c.setContent(html_079885d2d4f7dd4faa229d0c1d1ff610);
+            
+        
+
+        marker_c5c6024d2be44b3a5c5cde129298ffc2.bindPopup(popup_d426d128c2034f2c8add38ca345c1f3c)
+        ;
+
+        
+    
+    
+                marker_c5c6024d2be44b3a5c5cde129298ffc2.setIcon(icon_cee323f6d612bae56e6c3a56ef387f84);
+            
+    
+            var marker_ba304df3aa55c48cad93ceb033b3d3b5 = L.marker(
+                [52.26220515728271, -7.101176035300395],
+                {
+}
+            ).addTo(feature_group_a1d44aee75336198ba2240b0bed71980);
+        
+    
+            var icon_aeedfb2700fe07de94a1c51b88d747d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d5e4b549dce84624ca3907fe221a8148 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4d79cfe96ba688f4118399fa830db4db = $(`<div id="html_4d79cfe96ba688f4118399fa830db4db" style="width: 100.0%; height: 100.0%;">     <b>Waterford Retail Park - 6 Sheet</b><br>     City: Waterford<br>     Revenue: €4,100<br>     ROI: 241.7%     </div>`)[0];
+                popup_d5e4b549dce84624ca3907fe221a8148.setContent(html_4d79cfe96ba688f4118399fa830db4db);
+            
+        
+
+        marker_ba304df3aa55c48cad93ceb033b3d3b5.bindPopup(popup_d5e4b549dce84624ca3907fe221a8148)
+        ;
+
+        
+    
+    
+                marker_ba304df3aa55c48cad93ceb033b3d3b5.setIcon(icon_aeedfb2700fe07de94a1c51b88d747d9);
+            
+    
+            feature_group_a1d44aee75336198ba2240b0bed71980.addTo(map_90be8c6308e4631b9a1839a8140697b0);
+        
+    
+            var feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_a54d06784f816d8547bf34b489044ec2 = L.circleMarker(
+                [53.35721731308284, -6.264390081769537],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.9, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3);
+        
+    
+        var popup_cb2dd9f3f499f0723ee197debf7a9a4d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d460244fdeb16124fd0058172ac9377c = $(`<div id="html_d460244fdeb16124fd0058172ac9377c" style="width: 100.0%; height: 100.0%;">Dublin City Centre - 48 Sheet: €18,900</div>`)[0];
+                popup_cb2dd9f3f499f0723ee197debf7a9a4d.setContent(html_d460244fdeb16124fd0058172ac9377c);
+            
+        
+
+        circle_marker_a54d06784f816d8547bf34b489044ec2.bindPopup(popup_cb2dd9f3f499f0723ee197debf7a9a4d)
+        ;
+
+        
+    
+    
+            var circle_marker_50d8766cb25a467a1491da48eac6eede = L.circleMarker(
+                [51.898631016968544, -8.478135516104985],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.2, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3);
+        
+    
+        var popup_d9de5eef245e5234b3e7f42c69eb2a7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c97d0bf34c105023a5e105e52e63f8f = $(`<div id="html_0c97d0bf34c105023a5e105e52e63f8f" style="width: 100.0%; height: 100.0%;">Cork Motorway - Digital: €11,200</div>`)[0];
+                popup_d9de5eef245e5234b3e7f42c69eb2a7e.setContent(html_0c97d0bf34c105023a5e105e52e63f8f);
+            
+        
+
+        circle_marker_50d8766cb25a467a1491da48eac6eede.bindPopup(popup_d9de5eef245e5234b3e7f42c69eb2a7e)
+        ;
+
+        
+    
+    
+            var circle_marker_087dc79c00ebdf8cdcea59d0b48d6e4a = L.circleMarker(
+                [54.589510059466505, -5.926556246237691],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3);
+        
+    
+        var popup_22cf39676bba3bcbafb9004cbef5acc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e56ee76f0fd11577c893e5a8c4137eb4 = $(`<div id="html_e56ee76f0fd11577c893e5a8c4137eb4" style="width: 100.0%; height: 100.0%;">Belfast Roadside - 6 Sheet: €5,600</div>`)[0];
+                popup_22cf39676bba3bcbafb9004cbef5acc2.setContent(html_e56ee76f0fd11577c893e5a8c4137eb4);
+            
+        
+
+        circle_marker_087dc79c00ebdf8cdcea59d0b48d6e4a.bindPopup(popup_22cf39676bba3bcbafb9004cbef5acc2)
+        ;
+
+        
+    
+    
+            var circle_marker_a3d10bd2f7c29f81d8b5f933d30580a3 = L.circleMarker(
+                [53.35499273384593, -6.265213777915718],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 48.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3);
+        
+    
+        var popup_3da8f786a63cd14ae40990d4b1d56168 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c3155018bbbb31ea3ae5ba968eeaf30 = $(`<div id="html_3c3155018bbbb31ea3ae5ba968eeaf30" style="width: 100.0%; height: 100.0%;">Dublin Airport - Supersite: €48,000</div>`)[0];
+                popup_3da8f786a63cd14ae40990d4b1d56168.setContent(html_3c3155018bbbb31ea3ae5ba968eeaf30);
+            
+        
+
+        circle_marker_a3d10bd2f7c29f81d8b5f933d30580a3.bindPopup(popup_3da8f786a63cd14ae40990d4b1d56168)
+        ;
+
+        
+    
+    
+            var circle_marker_d247eac6ca1b829ade681aa17de70ecc = L.circleMarker(
+                [53.27880526420608, -9.056177029139521],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3);
+        
+    
+        var popup_85b359a5e3a43110a0b7cf53a9e75930 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71eb3e3157cbf11a6723bbb4e58ef1eb = $(`<div id="html_71eb3e3157cbf11a6723bbb4e58ef1eb" style="width: 100.0%; height: 100.0%;">Galway City - Bus Shelter: €2,800</div>`)[0];
+                popup_85b359a5e3a43110a0b7cf53a9e75930.setContent(html_71eb3e3157cbf11a6723bbb4e58ef1eb);
+            
+        
+
+        circle_marker_d247eac6ca1b829ade681aa17de70ecc.bindPopup(popup_85b359a5e3a43110a0b7cf53a9e75930)
+        ;
+
+        
+    
+    
+            var circle_marker_bfb106b00f50cba086f720250491bc1a = L.circleMarker(
+                [52.662976545741046, -8.619194444798065],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3);
+        
+    
+        var popup_55b1a9e21e26cd2e925785fccb56224e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9903bd320dd389e25bfd344fc1dc56de = $(`<div id="html_9903bd320dd389e25bfd344fc1dc56de" style="width: 100.0%; height: 100.0%;">Limerick Retail - 48 Sheet: €13,500</div>`)[0];
+                popup_55b1a9e21e26cd2e925785fccb56224e.setContent(html_9903bd320dd389e25bfd344fc1dc56de);
+            
+        
+
+        circle_marker_bfb106b00f50cba086f720250491bc1a.bindPopup(popup_55b1a9e21e26cd2e925785fccb56224e)
+        ;
+
+        
+    
+    
+            var circle_marker_0432ec6d49a99f9a0f782136560a78de = L.circleMarker(
+                [53.3565639617513, -6.256336698359493],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.2, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3);
+        
+    
+        var popup_4f7ce5fcbc33974eccc585754fd85bef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd28f6bce7bbc85d43d3c5cd1f6dbc62 = $(`<div id="html_dd28f6bce7bbc85d43d3c5cd1f6dbc62" style="width: 100.0%; height: 100.0%;">Dublin DART - 4 Sheet: €9,200</div>`)[0];
+                popup_4f7ce5fcbc33974eccc585754fd85bef.setContent(html_dd28f6bce7bbc85d43d3c5cd1f6dbc62);
+            
+        
+
+        circle_marker_0432ec6d49a99f9a0f782136560a78de.bindPopup(popup_4f7ce5fcbc33974eccc585754fd85bef)
+        ;
+
+        
+    
+    
+            var circle_marker_7c1803b864146ffe93d9a96e43fee266 = L.circleMarker(
+                [51.90499267686696, -8.465631484779212],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3);
+        
+    
+        var popup_876d6dc9a8c20f03be268f1a4b7d3fe2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f585556b6251dea112ac7d45d5d3245c = $(`<div id="html_f585556b6251dea112ac7d45d5d3245c" style="width: 100.0%; height: 100.0%;">Cork City - Digital: €17,600</div>`)[0];
+                popup_876d6dc9a8c20f03be268f1a4b7d3fe2.setContent(html_f585556b6251dea112ac7d45d5d3245c);
+            
+        
+
+        circle_marker_7c1803b864146ffe93d9a96e43fee266.bindPopup(popup_876d6dc9a8c20f03be268f1a4b7d3fe2)
+        ;
+
+        
+    
+    
+            var circle_marker_13c43c4a2be17fe4aa13ac09481dbb14 = L.circleMarker(
+                [54.60567428607492, -5.924838770162586],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3);
+        
+    
+        var popup_caf4ac78ecddf5c5965ef9efb1665b48 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f81e88b8fc88d28b64310fe4301a1574 = $(`<div id="html_f81e88b8fc88d28b64310fe4301a1574" style="width: 100.0%; height: 100.0%;">Belfast City Hall - Supersite: €33,000</div>`)[0];
+                popup_caf4ac78ecddf5c5965ef9efb1665b48.setContent(html_f81e88b8fc88d28b64310fe4301a1574);
+            
+        
+
+        circle_marker_13c43c4a2be17fe4aa13ac09481dbb14.bindPopup(popup_caf4ac78ecddf5c5965ef9efb1665b48)
+        ;
+
+        
+    
+    
+            var circle_marker_37ab2328b11d177b0ae878051c83d64b = L.circleMarker(
+                [52.26220515728271, -7.101176035300395],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3);
+        
+    
+        var popup_f0f5452759292fd147da39529833ea7a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7220cf8b0ef24e46ee27fbce3b034bd6 = $(`<div id="html_7220cf8b0ef24e46ee27fbce3b034bd6" style="width: 100.0%; height: 100.0%;">Waterford Retail Park - 6 Sheet: €4,100</div>`)[0];
+                popup_f0f5452759292fd147da39529833ea7a.setContent(html_7220cf8b0ef24e46ee27fbce3b034bd6);
+            
+        
+
+        circle_marker_37ab2328b11d177b0ae878051c83d64b.bindPopup(popup_f0f5452759292fd147da39529833ea7a)
+        ;
+
+        
+    
+    
+            feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3.addTo(map_90be8c6308e4631b9a1839a8140697b0);
+        
+    
+            var feature_group_8061bd81ea48da8805681b7f7c0523ea = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var heat_map_defa34098656eb1858a8b348a2fd0ed3 = L.heatLayer(
+                [[53.35721731308284, -6.264390081769537, 18.9], [51.898631016968544, -8.478135516104985, 11.2], [54.589510059466505, -5.926556246237691, 5.6], [53.35499273384593, -6.265213777915718, 48.0], [53.27880526420608, -9.056177029139521, 2.8], [52.662976545741046, -8.619194444798065, 13.5], [53.3565639617513, -6.256336698359493, 9.2], [51.90499267686696, -8.465631484779212, 17.6], [54.60567428607492, -5.924838770162586, 33.0], [52.26220515728271, -7.101176035300395, 4.1]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_defa34098656eb1858a8b348a2fd0ed3.addTo(feature_group_8061bd81ea48da8805681b7f7c0523ea);
+        
+    
+            feature_group_8061bd81ea48da8805681b7f7c0523ea.addTo(map_90be8c6308e4631b9a1839a8140697b0);
+        
+    
+            var layer_control_c31355b36f42e66672c50eddd0605f61_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_61e3a58ec436cc7df265fa36b2dee6ae,
+                },
+                overlays :  {
+                    "Markers" : feature_group_a1d44aee75336198ba2240b0bed71980,
+                    "Revenue Circles" : feature_group_d7ddfc85986aaf9cdf5c9ecc3a0315c3,
+                    "Heat Map" : feature_group_8061bd81ea48da8805681b7f7c0523ea,
+                },
+            };
+            let layer_control_c31355b36f42e66672c50eddd0605f61 = L.control.layers(
+                layer_control_c31355b36f42e66672c50eddd0605f61_layers.base_layers,
+                layer_control_c31355b36f42e66672c50eddd0605f61_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_90be8c6308e4631b9a1839a8140697b0);
+
+        
+</script>
+</html>
