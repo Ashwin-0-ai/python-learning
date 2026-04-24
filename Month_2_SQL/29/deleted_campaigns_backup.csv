@@ -1,0 +1,2 @@
+campaign_id,campaign_name,city_id,manager_id,format_id,start_date,end_date,budget,actual_spend,clicks,conversions,created_at
+4,Transit Network,3,4,3,2024-01-20,2024-03-20,55000,52000,2800,175,2026-04-18 18:17:39

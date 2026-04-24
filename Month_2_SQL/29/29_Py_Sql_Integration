@@ -1,0 +1,113 @@
+# 1. Setup and understanding connection 
+import sqlite3
+import pandas as pd 
+import os 
+from datetime import datetime
+import json 
+
+os.chdir(r'D:\Mission_Blitzkreig\Month_2_SQL')
+
+print("Day 29 : Python SQL Integration")
+
+
+#2. Understanding CRUD Operations 
+print("UNDERSTANDING CRUD OPERATIONS")
+
+crud_operations = """ 
+CRUD = Create, Read, Update, Delete
+
+ 1.CREATE (INSERT)
+   Purpose: Add new data to database
+   SQL: INSERT INTO table (column1, column2) VALUES (?, ?)
+   Python: cursor.execute(insert_query, data)
+   
+   Example: Add a new campaign to campaigns table
+   ✅ Use when: Creating new records (new campaign, new manager, etc.)
+   ❌ Avoid when: Modifying existing records (use UPDATE instead)
+   
+2. READ (SELECT)
+   Purpose: Retrieve data from database
+   SQL: SELECT * FROM table WHERE condition
+   Python: cursor.execute(select_query)
+         results = cursor.fetchall()  OR  pd.read_sql_query()
+   
+   Example: Get all campaigns by a specific manager
+   ✅ Use when: Querying, analyzing, displaying data
+   ❌ Avoid when: Modifying data (use INSERT, UPDATE, DELETE instead)
+   
+3. UPDATE
+   Purpose: Modify existing data in database
+   SQL: UPDATE table SET column1 = ? WHERE condition
+   Python: cursor.execute(update_query, data)
+   
+   Example: Update the budget of a specific campaign
+   ✅ Use when: Modifying existing records
+   ❌ Avoid when: Creating new records (use INSERT instead)
+   
+4. DELETE
+   Purpose: Remove data from database
+   SQL: DELETE FROM table WHERE condition
+   Python: cursor.execute(delete_query, data)
+   
+   Example: Delete a specific campaign
+   ✅ Use when: Removing records
+   ❌ Avoid when: Querying or analyzing data (use SELECT instead)
+
+   
+   TRANSACTION MANAGEMENT:
+- conn.commit() → Save all changes permanently
+- conn.rollback() → Undo changes if something goes wrong
+- Used together to ensure all-or-nothing operations
+"""
+
+print (crud_operations)
+
+# 3 . Create Operations 
+print ("3. CREATE OPERATIONS")
+
+with sqlite3.connect('marketing_campaigns_normalized') as conn:
+    cursor =conn.cursor()
+
+# Insert 1 city record
+    print("Insert 1 record")
+    insert_city ="""
+    insert INTO cities (city_name,region)
+    VALUES(?,?)
+    """ 
+    new_city = ('Hyderabad','South') 
+    cursor.execute(insert_city,new_city)
+    conn.commit()
+    print(f"Inserted new city: {new_city[0]}")
+    
+# Insert multiple city records
+print("Insert Multiple Record")
+insert_managers = """
+insert INTO campaign_managers (manager_name, email, phone)
+VALUES(?,?,?)
+"""
+
+new_managers = [
+    ('Kunal Kamra', 'kunal.kamra@example.com', '1234567890'),
+    ('Patricia Kuhar', 'Patricia_kuhar@gmai.com', '9099898989'),
+    ('Vani Muthu', 'vani.muthu@example.com', '9876543210')
+]
+
+cursor.executemany(insert_managers, new_managers)
+conn.commit()
+
+print(f"Inserted {len(new_managers)} new campaign managers.")
+
+# Get ID of inserted record 
+print("Insert and get an auto incrmenet ID ")
+insert_format = """
+insert INTO campaign_formats ( format_name,desription,average_cpm)
+VALUES(?,?,?)
+"""
+new_format = ('Radio', 'Radio Advertising', 80.0)
+cursor.execute(insert_format,new_format)
+format_id = cursor.lastrowid
+conn.commit()
+
+print(f"Inserted Format : {new_format[0]}")
+print(f"New Format ID : {format_id}")
+
