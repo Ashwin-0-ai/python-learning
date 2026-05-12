@@ -198,3 +198,4 @@ ORDER BY ca.Country,ca.AvgSpend DESC
 df_avg_country = pd.read_sql_query(query_above_avg,conn)
 print("\n Customers above country average spend:")
 print(df_avg_country)
+conn.close()
