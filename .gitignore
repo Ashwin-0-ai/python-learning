@@ -1,0 +1,7 @@
+*.db
+*.docx
+__pycache__/
+*.pyc
+.env
+*.xlsx
+*.csv
