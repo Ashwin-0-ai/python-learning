@@ -240,3 +240,4 @@ def q5_conditional_state_update(conn, window_end, checks_pass):
 
 checks_pass = q4_quality_checks(conn, window_start, window_end)
 q5_conditional_state_update(conn, window_end, checks_pass)
+conn.close()
