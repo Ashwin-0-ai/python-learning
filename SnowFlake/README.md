@@ -12,7 +12,7 @@ and analyses official German state population data from Destatis (2022 Census).
 
 ## Pipeline Architecture
 Destatis Excel → Python (Pandas clean) → CSV → Snowflake Stage→ COPY INTO RAW → STAGING (typed, transformed) → ANALYTICS (business layer)
-
+![Pipeline Architecture](pipeline_architecture.png)
 ## Tech Stack
 - **Snowflake** — cloud data warehouse (Azure region)
 - **Python / Pandas** — data cleaning and preparation
