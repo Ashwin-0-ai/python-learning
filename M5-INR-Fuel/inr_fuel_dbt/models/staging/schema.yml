@@ -1,0 +1,33 @@
+version: 2 
+
+models:
+  - name: stg_exchange_rates
+    description: "Staging model for INR Fuel comparision with other currencies"
+    columns:
+      - name: year
+        tests: 
+          - not_null
+        description: "Year of the exchange rate data"
+      - name: inr_per_gbp
+        tests:
+          - not_null
+        description: "INR value per GBP"
+      - name: inr_per_aed
+        description: "INR value per AED"
+      - name: inr_per_usd
+        description: "INR value per USD"
+
+  - name: stg_fuel_history
+    description: "Staging model for INR Fuel price history"
+    columns:
+      - name: month
+        tests: 
+          - not_null
+        description: "Month of the fuel price record"
+      - name: petrol_price_inr
+        tests: 
+          - not_null
+        description: "INR price of petrol"
+      - name: loaded_at
+        description: "Timestamp when the data was loaded into the staging model"
+
